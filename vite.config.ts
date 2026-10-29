@@ -46,4 +46,7 @@ function priceChatApi():Plugin{return{name:'price-chat-api',configureServer(serv
  }catch{res.statusCode=400;res.end(JSON.stringify({error:'Invalid request'}))}
 })}}}
 
-export default defineConfig({plugins:[priceChatApi()]});
+export default defineConfig({
+ base:process.env.GITHUB_ACTIONS?'/iStore-/':'/',
+ plugins:[priceChatApi()]
+});

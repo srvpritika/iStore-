@@ -20,7 +20,7 @@
   content: "";
   width: 76px;
   height: 24px;
-  background-image: url('/assets/pine/visa.svg'), url('/assets/pine/mastercard.svg'), url('/assets/pine/rupay.svg');
+  background-image: url('./pine/visa.svg'), url('./pine/mastercard.svg'), url('./pine/rupay.svg');
   background-repeat: no-repeat;
   background-size: 22px 22px;
   background-position: 0 center, 27px center, 54px center;
