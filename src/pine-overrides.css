@@ -1,0 +1,261 @@
+.apple-chat .pine-form > header button {
+  position: static;
+  color: #333;
+  font-size: 13px;
+}
+
+.apple-chat .pine-form > header .close-pay {
+  position: static;
+}
+
+.trust .pine-logo {
+  transform: rotate(180deg) scaleX(-1);
+}
+
+.card-number > img {
+  display: none;
+}
+
+.card-number::after {
+  content: "";
+  width: 76px;
+  height: 24px;
+  background-image: url('/assets/pine/visa.svg'), url('/assets/pine/mastercard.svg'), url('/assets/pine/rupay.svg');
+  background-repeat: no-repeat;
+  background-size: 22px 22px;
+  background-position: 0 center, 27px center, 54px center;
+}
+
+.pine-form .card-number,
+.pine-form .split-fields,
+.pine-form .name-field {
+  cursor: pointer;
+}
+
+.pine-form .card-number:hover,
+.pine-form .split-fields:hover,
+.pine-form .name-field:hover {
+  border-color: #0a7b59;
+}
+
+.demo-card-filled .card-number > span,
+.demo-card-filled .split-fields > span,
+.demo-card-filled .name-field {
+  color: #202124;
+}
+
+.pine-form .save-card {
+  height: auto;
+  min-height: 88px;
+  align-items: flex-start;
+  cursor: pointer;
+  transition: border-color .18s ease, box-shadow .18s ease;
+}
+
+.pine-form .save-card:focus-visible {
+  outline: none;
+  border-color: #003323;
+  box-shadow: 0 0 0 3px rgba(0, 51, 35, .14);
+}
+
+.pine-form .save-card > i {
+  position: relative;
+  flex: 0 0 18px;
+  margin-top: 13px;
+  transition: background .18s ease, border-color .18s ease;
+}
+
+.pine-form .save-card.checked > i {
+  background: #003323;
+  border-color: #003323;
+}
+
+.pine-form .save-card.checked > i::after {
+  content: "✓";
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  font: 700 13px/1 Arial, sans-serif;
+}
+
+.pine-form .save-card div {
+  padding: 12px 0;
+}
+
+.pine-form .save-card span {
+  line-height: 15px;
+}
+
+.pine-form .pay-button:disabled {
+  background: #b9bfbd;
+  color: rgba(255, 255, 255, .82);
+  cursor: not-allowed;
+  opacity: .72;
+}
+
+.otp-portal,
+.otp-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 10020;
+}
+
+.otp-screen .otp-checkout {
+  height: 640px;
+}
+
+.otp-panel {
+  width: 480px;
+  height: 640px;
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 16px 60px -20px rgba(0,0,0,.24);
+}
+
+.otp-panel > header {
+  height: 56px;
+  border-bottom: 1px solid #e8e8e8;
+  display: grid;
+  grid-template-columns: 1fr auto 32px;
+  align-items: center;
+  gap: 12px;
+  padding: 0 16px 0 32px;
+  color: rgba(28,28,28,.8);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.otp-panel > header button {
+  position: static;
+  border: 0;
+  background: none;
+  color: rgba(28,28,28,.8);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font: inherit;
+  cursor: pointer;
+}
+
+.otp-panel > header button img { width: 24px; height: 24px; }
+.otp-panel > header > div { border: 1px solid rgba(28,28,28,.12); border-radius: 12px; padding: 6px 10px; }
+.otp-panel > header .otp-close { width: 24px; height: 24px; padding: 0; justify-content: center; border-radius: 50%; color: #dd4d42; background: rgba(221,77,66,.12); }
+
+.otp-panel main {
+  padding: 32px 40px;
+  color: #1c1c1c;
+}
+
+.otp-illustration { width: 112px; height: 80px; object-fit: contain; margin-bottom: 24px; }
+.otp-panel h2 { font-size: 18px; line-height: 24px; margin: 0 0 8px; font-weight: 600; }
+.otp-panel main > p { margin: 0; color: rgba(28,28,28,.6); font-size: 14px; line-height: 18px; }
+.otp-panel main > p b { color: #1c1c1c; font-weight: 600; }
+
+.otp-input {
+  height: 48px;
+  border: 1px solid rgba(28,28,28,.7);
+  border-radius: 12px;
+  margin-top: 22px;
+  padding: 0 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.otp-input:focus-within { border-color: #003323; box-shadow: 0 0 0 2px rgba(0,51,35,.12); }
+.otp-input.invalid { border-color: #c84a42; }
+.otp-input input { min-width: 0; flex: 1; border: 0; outline: 0; font: 500 16px/20px Inter, Arial, sans-serif; letter-spacing: 3px; }
+.otp-input input::placeholder { color: rgba(28,28,28,.3); letter-spacing: 0; }
+.otp-input span { white-space: nowrap; color: rgba(28,28,28,.5); font-size: 12px; }
+.otp-input span b { color: rgba(28,28,28,.8); }
+.otp-error { display: block; color: #b43c34; margin: 6px 0 -2px; }
+
+.verify-pay {
+  width: 100%;
+  height: 52px;
+  border: 0;
+  border-radius: 112px;
+  margin-top: 22px;
+  background: linear-gradient(90deg,#285f50,#003323);
+  color: #fff;
+  font: 600 16px/20px Inter, Arial, sans-serif;
+  cursor: pointer;
+}
+.verify-pay:disabled { opacity: .45; cursor: not-allowed; }
+.otp-panel main .bank-copy { margin-top: 10px; text-align: center; }
+.otp-panel main .simulation-note { margin-top: 30px; text-align: center; font-size: 12px; }
+
+.otp-success {
+  width: 480px;
+  min-height: 400px;
+  position: absolute;
+  left: 50%; top: 50%;
+  transform: translate(-50%,-50%);
+  background: #fff;
+  border-radius: 16px;
+  padding: 60px 52px;
+  text-align: center;
+  box-shadow: 0 16px 60px -20px rgba(0,0,0,.32);
+}
+.otp-success > div { width: 64px; height: 64px; margin: 0 auto 20px; border-radius: 50%; display: grid; place-items: center; background: #e7f4ed; color: #07563d; font-size: 34px; }
+.otp-success h2 { margin: 0 0 12px; font-size: 24px; }
+.otp-success p { color: #555; line-height: 1.5; }
+.otp-success button { width: 100%; height: 48px; margin: 24px 0 14px; border: 0; border-radius: 99px; background: #003323; color: #fff; font-size: 16px; font-weight: 600; cursor: pointer; }
+.otp-success small { color: #777; }
+
+@media (max-width: 850px) {
+  .otp-screen .pine-order { display: none; }
+  .otp-panel { width: min(480px, calc(100vw - 24px)); }
+  .otp-panel main { padding: 28px 24px; }
+}
+
+.apple-chat .chat-thread {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.apple-chat .bot-message {
+  align-self: flex-start;
+  margin: 12px auto 0 0;
+}
+
+.apple-chat .user-message {
+  align-self: flex-end;
+  margin: 12px 0 0 auto;
+  text-align: left;
+}
+
+.apple-chat .typing {
+  align-self: flex-start;
+}
+
+.apple-chat .chat-date-separator {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 26px 0 10px;
+  color: #777;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.apple-chat .chat-date-separator::before,
+.apple-chat .chat-date-separator::after {
+  content: "";
+  height: 1px;
+  flex: 1;
+  background: #dedee2;
+}
+
+.apple-chat .chat-date-separator span {
+  white-space: nowrap;
+}
+
+.apple-chat .purchase-message {
+  white-space: pre-line;
+}
